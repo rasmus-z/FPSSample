@@ -165,6 +165,11 @@ public class Game : MonoBehaviour
     public static Game game;
     public event UpdateDelegate endUpdateEvent;
 
+    //
+    [ConfigVar(Name = "config.cameraprofile", DefaultValue = "ThirdPerson", Description = "Camera Profile", Flags = ConfigVar.Flags.Save)]
+    public static ConfigVar configCameraProfile;
+    //
+
     // Vars owned by server and replicated to clients
     [ConfigVar(Name = "server.tickrate", DefaultValue = "60", Description = "Tickrate for server", Flags = ConfigVar.Flags.ServerInfo)]
     public static ConfigVar serverTickRate;

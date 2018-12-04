@@ -182,6 +182,11 @@ public class UpdateCharacterCamera : BaseComponentSystem<LocalPlayer,LocalPlayer
             
         }            
 
+        //
+        if (Game.configCameraProfile.Value == "ThirdPerson")
+            forceThirdPerson = true;
+        //
+
         // Update character visibility
         var camProfile = forceThirdPerson ? CameraProfile.ThirdPerson : charPredictedState.cameraProfile; 
         var thirdPerson = camProfile != CameraProfile.FirstPerson;
